@@ -1,0 +1,78 @@
+export default function Component() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-4 flex items-center justify-center">
+      <Card className="w-full max-w-2xl bg-white shadow-lg">
+        <CardContent className="p-8">
+          {/* PlayStation Plus Header */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center">
+              <span className="text-white font-bold text-lg">+</span>
+            </div>
+            <span className="text-xl font-medium text-gray-800">PlayStation Plus</span>
+          </div>
+
+          {/* Essential Title */}
+          <h1 className="text-5xl font-black text-black mb-4">ESSENTIAL</h1>
+
+          {/* Current Plan Subtitle */}
+          <p className="text-gray-600 text-lg mb-8">Your current plan: 12 Months</p>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-600 text-lg">Online Multiplayer</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-600 text-lg">Exclusive Discounts</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-600 text-lg">Share Play</span>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-600 text-lg">Monthly Games</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-gray-600" />
+                <span className="text-gray-600 text-lg">Cloud Storage</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Duration Selection */}
+          <div className="bg-gray-200 rounded-full p-2 mb-8 flex">
+            <Button variant="ghost" className="flex-1 rounded-full text-gray-700 hover:bg-gray-300">
+              1 Month
+            </Button>
+            <Button variant="ghost" className="flex-1 rounded-full text-gray-700 hover:bg-gray-300">
+              3 Months
+            </Button>
+            <Button variant="default" className="flex-1 rounded-full bg-white text-black hover:bg-gray-50 shadow-sm">
+              12 Months
+            </Button>
+          </div>
+
+          {/* Current Plan Badge */}
+          <Badge className="bg-gray-600 text-white mb-4 px-4 py-2 text-sm">Your current plan</Badge>
+
+          {/* Pricing */}
+          <div className="mb-2">
+            <span className="text-4xl font-bold text-black">$109.99</span>
+          </div>
+          <p className="text-gray-600 mb-8">Pay every 12 months. Subscription continues until cancelled.</p>
+
+          {/* Continue Button */}
+          <Button className="w-full bg-gray-600 hover:bg-gray-700 text-white py-4 text-lg rounded-lg" size="lg">
+            Continue
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
